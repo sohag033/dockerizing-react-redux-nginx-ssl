@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+  
+  web:
+    container_name: react-frontend
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - './app/node_module'
+    ports: 
+      - '80:80'
+      - '443:443'
+    depends_on: 
+      - backend
+    networks: 
+      - react
+      
+  backend:
+    container_name: react-backend
+    build: backend_nodeexpress/.
+    ports:
+      - '3000:27017'
+    volumes:
+      - '.:/app'
+    networks: 
+      - react
+
+networks: 
+  react:
+    driver: bridge
+
