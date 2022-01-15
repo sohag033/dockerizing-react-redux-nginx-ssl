@@ -14,7 +14,7 @@
     "babel-core": "^6.26.0",
     "babel-plugin-transform-es2015-shorthand-properties": "*",
     "history": "^4.6.3",
-    "marked": "^0.3.6",
+    "marked": "^4.0.10",
     "prop-types": "^15.5.10",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
